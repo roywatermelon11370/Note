@@ -1,0 +1,70 @@
+/* tailwind build assets/src/style.css -o assets/css/style.css */
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+* {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+}
+
+.font-bold {
+    font-weight: 800;
+}
+
+a {
+    @apply text-green-500 inline-block;
+}
+
+a:hover {
+    @apply text-green-700;
+}
+
+.btn-actionbar {
+    @apply text-gray-600;
+}
+
+.btn-actionbar:hover {
+    @apply text-gray-800;
+}
+
+.btn-primary {
+    transition: all .2s ease;
+    @apply bg-green-500 text-white font-bold p-3 px-5 inline-block uppercase;
+}
+
+.btn-primary:hover {
+    transition: all .2s ease;
+    @apply bg-green-700 text-white font-bold p-3 px-5 inline-block uppercase;
+}
+
+.btn-primary:active {
+    transition: all .2s ease;
+    transform: scale(0.95);
+}
+
+.btn-white {
+    transition: all .2s ease;
+    @apply bg-white text-green-500 font-bold p-3 px-5 inline-block uppercase;
+}
+
+.btn-white:hover {
+    transition: all .2s ease;
+    @apply bg-green-200 text-green-500 font-bold p-3 px-5 inline-block uppercase;
+}
+
+.btn-white:active {
+    transition: all .2s ease;
+    transform: scale(0.95);
+}
+
+/* form */
+.form-input {
+    @apply bg-gray-100 w-full p-3 block;
+}
+
+.form-label {
+    @apply text-gray-600 uppercase font-bold block;
+}
