@@ -31185,6 +31185,7 @@ a {
 }
 
 a:hover {
+  cursor: pointer;
   --tw-text-opacity: 1;
   color: rgba(4, 120, 87, var(--tw-text-opacity));
 }
@@ -31195,6 +31196,7 @@ a:hover {
 }
 
 .btn-actionbar:hover {
+  cursor: pointer;
   --tw-text-opacity: 1;
   color: rgba(31, 41, 55, var(--tw-text-opacity));
 }
@@ -31218,6 +31220,7 @@ a:hover {
   transition: all .2s ease;
   --tw-bg-opacity: 1;
   background-color: rgba(4, 120, 87, var(--tw-bg-opacity));
+  cursor: pointer;
   display: inline-block;
   font-weight: 700;
   padding: 0.75rem;
@@ -31230,7 +31233,7 @@ a:hover {
 }
 
 .btn-primary:active {
-  transition: all .2s ease;
+  transition: all .1s ease;
   transform: scale(0.95);
 }
 
@@ -31253,6 +31256,7 @@ a:hover {
   transition: all .2s ease;
   --tw-bg-opacity: 1;
   background-color: rgba(167, 243, 208, var(--tw-bg-opacity));
+  cursor: pointer;
   display: inline-block;
   font-weight: 700;
   padding: 0.75rem;
@@ -31265,11 +31269,52 @@ a:hover {
 }
 
 .btn-white:active {
+  transition: all .1s ease;
+  transform: scale(0.95);
+}
+
+.btn-secondary {
   transition: all .2s ease;
+  --tw-bg-opacity: 1;
+  background-color: rgba(75, 85, 99, var(--tw-bg-opacity));
+  display: inline-block;
+  font-weight: 700;
+  padding: 0.75rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.btn-secondary:hover {
+  transition: all .2s ease;
+  --tw-bg-opacity: 1;
+  background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  padding: 0.75rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.btn-secondary:active {
+  transition: all .1s ease;
   transform: scale(0.95);
 }
 
 /* form */
+
+.form {
+  -webkit-animation: fade-in .3s ease-out;
+          animation: fade-in .3s ease-out;
+}
 
 .form-input {
   --tw-bg-opacity: 1;
@@ -31280,12 +31325,43 @@ a:hover {
 }
 
 .form-label {
-  display: block;
+  display: flex;
+  align-items: center;
   font-weight: 700;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   --tw-text-opacity: 1;
   color: rgba(75, 85, 99, var(--tw-text-opacity));
   text-transform: uppercase;
   font-weight: 800;
+}
+
+.form-label>span {
+  margin-right: 0.5rem;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    transform: translate(0px, 50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    transform: translate(0px, 50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
 }
 
 @media (min-width: 640px) {

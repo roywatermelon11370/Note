@@ -19,7 +19,7 @@ a {
 }
 
 a:hover {
-    @apply text-green-700;
+    @apply text-green-700 cursor-pointer;
 }
 
 .btn-actionbar {
@@ -27,7 +27,7 @@ a:hover {
 }
 
 .btn-actionbar:hover {
-    @apply text-gray-800;
+    @apply text-gray-800 cursor-pointer;
 }
 
 .btn-primary {
@@ -37,11 +37,11 @@ a:hover {
 
 .btn-primary:hover {
     transition: all .2s ease;
-    @apply bg-green-700 text-white font-bold p-3 px-5 inline-block uppercase;
+    @apply bg-green-700 text-white font-bold p-3 px-5 inline-block uppercase cursor-pointer;
 }
 
 .btn-primary:active {
-    transition: all .2s ease;
+    transition: all .1s ease;
     transform: scale(0.95);
 }
 
@@ -52,19 +52,54 @@ a:hover {
 
 .btn-white:hover {
     transition: all .2s ease;
-    @apply bg-green-200 text-green-500 font-bold p-3 px-5 inline-block uppercase;
+    @apply bg-green-200 text-green-500 font-bold p-3 px-5 inline-block uppercase cursor-pointer;
 }
 
 .btn-white:active {
+    transition: all .1s ease;
+    transform: scale(0.95);
+}
+
+.btn-secondary {
     transition: all .2s ease;
+    @apply bg-gray-600 text-white font-bold p-3 px-5 inline-block uppercase;
+}
+
+.btn-secondary:hover {
+    transition: all .2s ease;
+    @apply bg-gray-800 text-white font-bold p-3 px-5 inline-block uppercase cursor-pointer;
+}
+
+.btn-secondary:active {
+    transition: all .1s ease;
     transform: scale(0.95);
 }
 
 /* form */
+.form {
+    animation: fade-in .3s ease-out;
+}
+
 .form-input {
     @apply bg-gray-100 w-full p-3 block;
 }
 
 .form-label {
-    @apply text-gray-600 uppercase font-bold block;
+    @apply text-gray-600 uppercase font-bold flex items-center my-2;
+}
+
+.form-label>span {
+    @apply mr-2;
+}
+
+@keyframes fade-in {
+    from {
+        transform: translate(0px, 50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
 }
