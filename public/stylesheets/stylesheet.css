@@ -31322,6 +31322,20 @@ a:hover {
   display: block;
   padding: 0.75rem;
   width: 100%;
+  transition: background .2s ease;
+}
+
+.form-input:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+  transition: background .2s ease;
+}
+
+.form-input:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  outline: 2px solid #10b981;
+  transition: all .2s ease;
 }
 
 .form-label {
@@ -31362,6 +31376,47 @@ a:hover {
     transform: translate(0px, 0px);
     opacity: 1;
   }
+}
+
+.form-checkbox input[type="checkbox"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.form-checkbox-input {
+  width: 1em;
+  height: 1em;
+  background-size: 0.8em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  --tw-bg-opacity: 1;
+  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+  margin-right: 0.75rem;
+  transition: background .2s ease;
+}
+
+.form-checkbox-input:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+  transition: background .2s ease;
+}
+
+.form-checkbox-input:checked {
+  --tw-bg-opacity: 1;
+  background-color: rgba(16, 185, 129, var(--tw-bg-opacity));
+}
+
+.form-checkbox-input:checked:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(4, 120, 87, var(--tw-bg-opacity));
+  transition: background .2s ease;
+}
+
+.form-checkbox-input:checked[type=checkbox] {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath fill='%23ffffff'  d='M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z'/%3e%3c/svg%3e");
 }
 
 @media (min-width: 640px) {
