@@ -23,24 +23,33 @@
       </form>
     </div>
 
-    <table class="custom-table w-full table-fixed">
-      <thead>
-        <tr>
-          <th>Title</th>
-          <th>Author</th>
-          <th>Views</th>
-          <th class="w-1/6"></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>123</td>
-          <td>333</td>
-          <td>yyy</td>
-          <td><a href="#"><span class="material-icons">edit</span></a></td>
-        </tr>
+    <% if(notes.length>0){ %>
+      <table class="custom-table w-full table-fixed">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>people</th>
+            <th>createdate</th>
+            <th class="w-1/6"></th>
+          </tr>
+        </thead>
+        <tbody>
+      <% for(let i=0;i<notes.length;i++){ %>
+        
+          <tr>
+            <td><a href="/note/<%= notes[i].num %>"><%= notes[i].name %></a></td>
+            <td><%= notes[i].account %></td>
+            <td><%= notes[i].createdate %></td>
+            <td><a href="/<%= notes[i].num %>"><span class="material-icons">edit</span></a></td>
+          </tr>
+        
+      <% } %>
       </tbody>
-    </table>
+      </table>
+    <% }else{ %>
+      <div class="text-center text-gray-600 text-xl">No notes exist.</div>
+    <% } %>
+    
 
     <div class="mt-5 text-center"><a href="" class="btn-secondary">logout</a></div>
   </div>

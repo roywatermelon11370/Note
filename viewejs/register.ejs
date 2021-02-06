@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../public/stylesheets/stylesheet.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center p-5 min-h-screen">
+    <section class="bg-white p-8 w-full md:w-1/2 lg:w-1/3 relative">
+        <div class="flex justify-center">
+            <div class="inline-block text-center">
+                <h1 class="font-bold text-3xl">Register</h1>
+                <p class="text-gray-600 mt-3">Welcome to join us</p>
+            </div>
+        </div>
+
+        <a onclick="history.back()" class="absolute top-0 right-0 p-5 btn-actionbar material-icons">close</a>
+
+        <form action="" method="post" class="mt-5 form">
+            <div>
+                <label for="account" class="form-label"><span class="material-icons">account_box</span> account</label>
+                <input type="text" name="" id="account" class="form-input">
+            </div>
+
+            <div class="mt-5">
+                <label for="password" class="form-label"><span class="material-icons">vpn_key</span> password</label>
+                <input type="password" name="" id="password" class="form-input">
+            </div>
+
+            <div class="mt-5">
+                <label for="confirm-password" class="form-label"><span class="material-icons">vpn_key</span> confirm
+                    password</label>
+                <input type="password" name="" id="confirm-password" class="form-input">
+            </div>
+
+            <div id="err_msg mt-5"></div>
+
+            <input type="submit" value="register" class="btn-primary w-full mt-5">
+
+        </form>
+    </section>
+</body>
+
+</html>

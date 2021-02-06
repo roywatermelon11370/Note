@@ -10,6 +10,10 @@
     font-weight: 500;
 }
 
+.material-icons {
+    font-size: inherit !important;
+}
+
 .font-bold {
     font-weight: 800;
 }
@@ -78,13 +82,8 @@ a:hover {
 /* index */
 .line-hidden {
     transform: scale(0,1);
-    transition: all .3s ease-out;
 }
 
-.line {
-    transform: scale(1,1);
-    transition: all .3s ease-out;
-}
 
 /* form */
 .form {
@@ -159,3 +158,34 @@ a:hover {
 .form-checkbox-input:checked[type=checkbox] {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath fill='%23ffffff'  d='M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z'/%3e%3c/svg%3e");
 }
+
+/* table */
+.custom-table {
+    border-collapse: collapse;
+}
+
+.custom-table thead tr {
+    @apply table-row;
+}
+
+.custom-table thead tr th {
+    @apply table-cell px-5 py-3 font-bold uppercase text-center text-xl;
+}
+
+.custom-table tbody tr td {
+    @apply border-r table-cell border-gray-200 bg-white px-5 py-3 text-center;
+}
+
+.custom-table tbody tr td:last-child {
+    @apply border-0 table-cell bg-white px-5 py-3 text-center;
+}
+
+.custom-table tbody tr {
+    @apply border-b table-row border-gray-200;
+}
+
+.custom-table tbody tr:last-child {
+    @apply table-row border-0;
+}
+
+
