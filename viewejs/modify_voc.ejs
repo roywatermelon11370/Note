@@ -23,10 +23,10 @@
 
         <div id="voc" class="p-5 w-full bg-white mt-5">
             <div class="flex">
-                <input type="text" id="word" class="form-input">
+                <input type="text" id="word" class="form-input"  style="width: calc( '100%' - '100.8px' );">
                 <button id="voc_submit" class="btn-primary ml-5">submit</button>
             </div>
-            <textarea name="" id="con" cols="30" rows="10" class="form-input mt-5"></textarea>
+            <textarea name="" id="con" rows="10" class="form-input mt-5"></textarea>
         </div>
 
         <% if(!note){ %>
@@ -35,7 +35,7 @@
             </div>
 
             <% }else if(note.type=="voc_list" ){ %>
-                <form action="/modify" class="mt-5 w-full p-5 bg-white">
+                <form action="/modify/<%= note.num %>" class="mt-5 w-full p-5 bg-white">
                     <div>
                         <label for="name" class="form-label"><span class="material-icons">face</span> name</label>
                         <input type="text" name="acc" id="name" class="form-input">
