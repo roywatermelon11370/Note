@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Modify Voc</title>
     <link rel="stylesheet" href="../public/stylesheets/stylesheet.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -14,10 +14,24 @@
 <body class="p-5 bg-gray-100 flex justify-center">
     <div class="w-full lg:w-1/2">
         <div class="flex justify-between items-center">
-            <a href="/list" class="material-icons mr-5 btn-actionbar">arrow_back</a>
-            <a href="" class="btn-secondary">logout</a>
+            <div class="text-2xl">
+                <a href="/list" class="material-icons mr-5 btn-actionbar">arrow_back</a>
+            </div>
+            <a href="/logout" class="btn-secondary">logout</a>
         </div>
-        <h1 class="text-4xl font-bold mt-5">Modify</h1>
+        <h1 class="text-4xl font-bold mt-5">Modify Voc</h1>
+
+        <div id="voc" class="p-5 w-full bg-white mt-5">
+            <div class="flex">
+                <input type="text" id="word" class="form-input">
+                <button id="voc_submit" class="btn-primary ml-5">submit</button>
+            </div>
+            <textarea name="" id="con" cols="30" rows="10" class="form-input mt-5"></textarea>
+        </div>
+
+        <div class="mt-5 bg-white p-5 text-center w-full">
+            <p class="text-gray-600">Note not found</p>
+        </div>
 
         <form action="/modify" class="mt-5 w-full p-5 bg-white">
             <div>
@@ -34,6 +48,10 @@
                 <input type="submit" value="submit" class="btn-primary">
             </div>
         </form>
+
+        <div class="mt-5 bg-white p-5 text-center w-full">
+            <p class="text-gray-600">Something went wrong</p>
+        </div>
     </div>
 </body>
 
