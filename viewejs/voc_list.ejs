@@ -24,21 +24,26 @@
         <div class="mt-5 w-full p-5 bg-white">
             <% if(!note){ %>
                 <div class="text-center text-gray-600 text-xl">No notes exist.</div>
-            <% }else if(note.type=="voc_list"){ %>
-            <div class="flex justify-between">
-                <div class="flex items-center text-xl text-gray-600">
-                    <span class="material-icons mr-3 md:ml-3">account_box</span> 
-                    <%= note.account %>
-                </div>
-                <a href="/modify" class="btn-primary"><span class="material-icons text-xs">create</span> modify</a>
-            </div>
+                <% }else if(note.type=="voc_list" ){ %>
+                    <div class="flex justify-between">
+                        <div class="flex items-center text-xl text-gray-600">
+                            <span class="material-icons mr-3 md:ml-3">face</span>
+                            <%= note.account %>
+                        </div>
+                        <a href="/modify" class="btn-primary"><span class="material-icons text-xs">create</span>
+                            modify</a>
+                    </div>
 
-            <pre class="w-full leading-normal my-5 md:mx-3" style="font-family: 'Manrope', '微軟正黑體', sans-serif;"><%= note.content %></pre>
+                    <pre class="w-full leading-normal my-5 md:mx-3"
+                        style="font-family: 'Manrope', '微軟正黑體', sans-serif;"><%= note.content %></pre>
 
-            <div class="flex items-center text-xl text-gray-600 md:mx-3"><span class="material-icons mr-3">schedule</span> <%= note.createdate %></div>
-            <% }else{ %>
-            <div class="text-center text-gray-600 text-xl">Something went wrong.</div>
-            <% }%>
+                    <div class="flex items-center text-xl text-gray-600 md:mx-3"><span
+                            class="material-icons mr-3">schedule</span>
+                        <%= note.createdate %>
+                    </div>
+                    <% }else{ %>
+                        <div class="text-center text-gray-600 text-xl">Something went wrong.</div>
+                        <% }%>
         </div>
     </div>
 </body>
