@@ -79,12 +79,6 @@ a:hover {
     transform: scale(0.95);
 }
 
-/* index */
-.line-hidden {
-    transform: scale(0,1);
-}
-
-
 /* form */
 .form {
     animation: fade-in .3s ease-out;
@@ -188,4 +182,6 @@ a:hover {
     @apply table-row border-0;
 }
 
-
+pre {
+    white-space: pre-wrap;
+}

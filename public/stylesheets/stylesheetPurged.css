@@ -1,5 +1,7 @@
 /* tailwind build assets/src/style.css -o assets/css/style.css */
 
+/* ! tailwindcss v2.0.3 | MIT License | https://tailwindcss.com */
+
 /*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
 /*
@@ -409,15 +411,18 @@ textarea {
 }
 
 input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
   color: #9ca3af;
 }
 
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  opacity: 1;
   color: #9ca3af;
 }
 
 input::placeholder,
 textarea::placeholder {
+  opacity: 1;
   color: #9ca3af;
 }
 
@@ -803,6 +808,11 @@ video {
   color: rgba(229, 231, 235, var(--tw-text-opacity));
 }
 
+.break-normal {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -1041,8 +1051,6 @@ a:hover {
   transform: scale(0.95);
 }
 
-/* index */
-
 /* form */
 
 .form {
@@ -1215,6 +1223,10 @@ a:hover {
   display: table-row;
 }
 
+pre {
+  white-space: pre-wrap;
+}
+
 @media (min-width: 768px) {
   .md\:h-2\/3 {
     height: 66.666667%;
@@ -1260,5 +1272,3 @@ a:hover {
     width: 33.333333%;
   }
 }
-
-
