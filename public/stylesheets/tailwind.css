@@ -183,5 +183,5 @@ a:hover {
 }
 
 pre {
-    white-space: pre-wrap;
+    @apply whitespace-pre-wrap;
 }
